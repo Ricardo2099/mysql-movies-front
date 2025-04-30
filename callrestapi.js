@@ -1,4 +1,4 @@
-const API_URL = "https://pg-restapi-movie.onrender.com/api/movies";
+const API_URL = "https://mysql-movie.onrender.com/api/movies";
 
 // Obtener películas
 async function getMovies() {
