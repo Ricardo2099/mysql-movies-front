@@ -12,7 +12,7 @@ jobs:
 
       - run: echo 'Construyendo imagen Frontend...'
 
-      - run: docker build -t ${{ secrets.DOCKER_USER }}/frontend-restapi-movie:${{ github.sha }} .
+      - run: docker build -t ${{ secrets.DOCKER_USER }}/frontend-mysql-movie:${{ github.sha }} .
 
       - run: docker images
 
@@ -23,4 +23,4 @@ jobs:
         run: docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
       - name: docker push
-        run: docker push ${{ secrets.DOCKER_USER }}/frontend-restapi-movie:${{ github.sha }}
+        run: docker push ${{ secrets.DOCKER_USER }}/frontend-mysql-movie:${{ github.sha }}
